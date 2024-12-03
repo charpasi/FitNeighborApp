@@ -41,6 +41,7 @@ android {
 
 dependencies {
 
+    implementation (libs.room.runtime)
     implementation(libs.appcompat)
     implementation(libs.material)
     implementation(libs.activity)
@@ -59,4 +60,5 @@ dependencies {
     androidTestImplementation(libs.ui.test.junit4)
     debugImplementation(libs.ui.tooling)
     debugImplementation(libs.ui.test.manifest)
+    annotationProcessor (libs.room.compiler)
 }
