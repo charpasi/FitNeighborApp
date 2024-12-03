@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">FitNeighbor App</string>
+    <string name="title_activity_messages">Messages</string>
 </resources>
