@@ -15,6 +15,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.fitneighborapp.NavBar;
 import com.example.fitneighborapp.R;
 import com.example.fitneighborapp.data.AppDatabase;
 import com.example.fitneighborapp.data.MessageDao;
@@ -22,7 +23,7 @@ import com.example.fitneighborapp.data.MessageDao;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MessagesActivity extends AppCompatActivity {
+public class MessagesActivity extends NavBar {
 
     private RecyclerView recyclerViewMessages;
     private EditText editTextMessage;
@@ -38,6 +39,8 @@ public class MessagesActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_messages);
+
+        setupBottomNavigation(R.id.nav_messages);
 
         // Initialize views
         recyclerViewMessages = findViewById(R.id.recyclerViewMessages);
