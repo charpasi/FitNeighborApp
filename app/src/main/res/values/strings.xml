@@ -1,7 +1,23 @@
 <resources>
     <string name="app_name">FitNeighbor App</string>
     <string name="title_activity_messages">Messages</string>
-    <string name="walking_button">Walking</string>
-    <string name="running_button">Running</string>
-    <string name="biking_button">Biking</string>
+    <string name="walking_button">Walk</string>
+    <string name="running_button">Run</string>
+    <string name="biking_button">Cycle</string>
+    <string name="quick_challenge"><b>Quick Challenges</b></string>
+    <string name="current_challenge"><b>Current Challenges</b></string>
+    <string name="individual_challenge"><b>Individual Challenges</b></string>
+    <string name="team_challenge"><b>Team Challenges</b></string>
+    <string name="individual1">500ft</string>
+    <string name="individual2">1 Mile</string>
+    <string name="individual3">5k</string>
+    <string name="team1">Trail 1</string>
+    <string name="team2">Trail 2</string>
+    <string name="team3">Trail 3</string>
+    <string name="current1"><b>Walk 5k</b></string>
+    <string name="current2"><b>Run 1 Mile</b></string>
+    <string name="current3"><b>Bike 10 Miles</b></string>
+    <string name="current1_progress"><b>4.0/5.0 km</b></string>
+    <string name="current2_progress"><b>0.5/1.0 mile</b></string>
+    <string name="current3_progress"><b>6.5/10.0 miles</b></string>
 </resources>
