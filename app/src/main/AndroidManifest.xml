@@ -30,6 +30,12 @@
             android:exported="false"
             android:label="@string/title_activity_messages"
             android:theme="@style/Theme.FitNeighborApp" />
+
+        <activity
+            android:name=".challenges.ChallengesActivity"
+            android:exported="false"
+            android:label="@string/title_activity_challenges"
+            android:theme="@style/Theme.FitNeighborApp" />
     </application>
 
 </manifest>

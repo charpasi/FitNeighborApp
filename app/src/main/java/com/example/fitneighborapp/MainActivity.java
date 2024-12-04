@@ -2,9 +2,10 @@ package com.example.fitneighborapp;
 
 import android.content.Intent;
 import android.os.Bundle;
-import androidx.annotation.NonNull;
+//import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.fitneighborapp.challenges.ChallengesActivity;
 import com.example.fitneighborapp.messages.MessagesActivity;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
@@ -44,8 +45,8 @@ public class MainActivity extends AppCompatActivity {
 
             } else if (id == R.id.nav_challenge) {
                 // Navigate to ChallengeActivity (if implemented)
-                // Intent intent = new Intent(MainActivity.this, ChallengeActivity.class);
-                // startActivity(intent);
+                 Intent intent = new Intent(MainActivity.this, ChallengesActivity.class);
+                 startActivity(intent);
                 return true;
 
             } else {
