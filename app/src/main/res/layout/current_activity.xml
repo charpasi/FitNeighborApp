@@ -24,29 +24,29 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="54dp"
         android:text="Return"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="115dp"
-        android:layout_marginTop="28dp"
-        android:text="RUN"
-        android:textSize="34sp"
-        app:layout_constraintStart_toEndOf="@+id/textView"
-        app:layout_constraintTop_toTopOf="parent" />
+<TextView
+android:id="@+id/textView2"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:layout_marginStart="115dp"
+android:layout_marginTop="28dp"
+android:text="RUN"
+android:textSize="34sp"
+app:layout_constraintStart_toEndOf="@+id/textView"
+app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="52dp"
-        android:layout_marginTop="412dp"
-        android:text="LET'S GO"
-        android:textSize="34sp"
-        app:layout_constraintStart_toEndOf="@id/textView"
-        app:layout_constraintTop_toTopOf="parent" />
+<Button
+android:id="@+id/button2"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:layout_marginStart="52dp"
+android:layout_marginTop="412dp"
+android:text="LET'S GO"
+android:textSize="34sp"
+app:layout_constraintStart_toEndOf="@id/textView"
+app:layout_constraintTop_toTopOf="parent" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
