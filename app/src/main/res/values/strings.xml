@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">FitNeighbor App</string>
     <string name="title_activity_messages">Messages</string>
+    <string name="title_activity_challenges">Challenges</string>
     <string name="walking_button">Walk</string>
     <string name="running_button">Run</string>
     <string name="biking_button">Cycle</string>
