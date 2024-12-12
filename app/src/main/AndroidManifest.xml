@@ -36,6 +36,11 @@
             android:exported="false"
             android:label="@string/title_activity_challenges"
             android:theme="@style/Theme.FitNeighborApp" />
+
+        <activity android:name=".streak.StreakActivity">
+            <!-- Optional: Add any other configurations you need -->
+        </activity>
+
     </application>
 
 </manifest>
