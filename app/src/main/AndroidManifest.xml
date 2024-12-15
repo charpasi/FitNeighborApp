@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.fitneighborapp">
@@ -31,11 +30,27 @@
             android:label="@string/title_activity_messages"
             android:theme="@style/Theme.FitNeighborApp" />
 
+        <!-- Challenges Activity -->
         <activity
             android:name=".challenges.ChallengesActivity"
             android:exported="false"
             android:label="@string/title_activity_challenges"
             android:theme="@style/Theme.FitNeighborApp" />
+
+        <!-- Quick Challenges Activity -->
+        <activity
+            android:name=".QuickChallengeActivity"
+            android:exported="true"
+            android:label="Quick Challenges"
+            android:theme="@style/Theme.FitNeighborApp" />
+
+        <!-- Current Activity -->
+        <activity
+            android:name=".CurrentActivity"
+            android:exported="true"
+            android:label="Current Activity"
+            android:theme="@style/Theme.FitNeighborApp"
+            tools:ignore="Instantiatable" />
     </application>
 
 </manifest>
