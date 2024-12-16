@@ -7,18 +7,36 @@
     tools:context=".streak.StreakActivity"
     android:background="@color/primary_background">
 
-    <!-- Display Streak Count -->
-    <TextView
-        android:id="@+id/streakCountText"
+    <!-- LinearLayout for icon and streak count -->
+    <LinearLayout
+        android:id="@+id/streakLayout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Streak: 0 Days"
-        android:textSize="24sp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
         app:layout_constraintBottom_toTopOf="@+id/quotePager"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="100dp"/>
+        android:layout_marginTop="100dp">
+
+        <!-- Icon for streak -->
+        <ImageView
+            android:id="@+id/streakIcon"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginEnd="8dp"
+            android:src="@drawable/ic_streak"
+            app:tint="#FFD700"/>
+
+        <!-- TextView for streak count -->
+        <TextView
+            android:id="@+id/streakCountText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Streak: 0 Days"
+            android:textSize="32sp" />
+    </LinearLayout>
 
     <!-- ViewPager2 for Motivational Quotes -->
     <androidx.viewpager2.widget.ViewPager2
@@ -28,7 +46,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintBottom_toTopOf="@+id/bottom_navigation"
-        app:layout_constraintTop_toBottomOf="@id/streakCountText" />
+        app:layout_constraintTop_toBottomOf="@id/streakLayout" />
 
     <!-- Bottom Navigation -->
     <com.google.android.material.bottomnavigation.BottomNavigationView
