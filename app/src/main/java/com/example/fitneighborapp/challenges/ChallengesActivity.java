@@ -2,9 +2,7 @@ package com.example.fitneighborapp.challenges;
 
 import android.os.Bundle;
 
-import androidx.appcompat.app.AppCompatActivity;
 import com.example.fitneighborapp.NavBar;
-
 import com.example.fitneighborapp.R;
 
 public class ChallengesActivity extends NavBar {

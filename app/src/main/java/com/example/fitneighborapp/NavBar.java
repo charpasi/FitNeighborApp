@@ -2,7 +2,9 @@ package com.example.fitneighborapp;
 
 import android.content.Intent;
 import android.os.Bundle;
+
 import androidx.appcompat.app.AppCompatActivity;
+
 import com.example.fitneighborapp.challenges.ChallengesActivity;
 import com.example.fitneighborapp.messages.MessagesActivity;
 import com.example.fitneighborapp.streak.StreakActivity;

@@ -1,6 +1,5 @@
 package com.example.fitneighborapp;
 
-import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -20,8 +19,8 @@ public class QuickChallengeActivity extends AppCompatActivity {
 
     // Navigate to CurrentActivity with the activity type
     private void openActivity(String activityType) {
-        Intent intent = new Intent(this, CurrentActivity.class);
-        intent.putExtra("ACTIVITY_TYPE", activityType); // Pass the activity type
-        startActivity(intent); // Start CurrentActivity
+        //Intent intent = new Intent(this, CurrentActivity.class);
+        //intent.putExtra("ACTIVITY_TYPE", activityType); // Pass the activity type
+        //startActivity(intent); // Start CurrentActivity
     }
 }
