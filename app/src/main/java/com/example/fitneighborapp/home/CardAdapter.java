@@ -1,6 +1,7 @@
 package com.example.fitneighborapp.home;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,12 +14,15 @@ import com.example.fitneighborapp.R;
 
 public class CardAdapter extends RecyclerView.Adapter<CardAdapter.ViewHolder> {
 
-    private final int[] images;
-    private final Context context;
+    private final int[] images; // Array of drawable resource IDs
+    private final Context context; // Activity context
+    private final Class<?>[] targetActivities; // Array of target activities
 
-    public CardAdapter(Context context, int[] images) {
+    // Constructor
+    public CardAdapter(Context context, int[] images, Class<?>[] targetActivities) {
         this.context = context;
         this.images = images;
+        this.targetActivities = targetActivities;
     }
 
     @NonNull
@@ -30,7 +34,14 @@ public class CardAdapter extends RecyclerView.Adapter<CardAdapter.ViewHolder> {
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
+        // Set the image resource
         holder.imageView.setImageResource(images[position]);
+
+        // Set click listener to navigate to the relevant activity
+        holder.imageView.setOnClickListener(v -> {
+            Intent intent = new Intent(context, targetActivities[position]);
+            context.startActivity(intent);
+        });
     }
 
     @Override
@@ -38,6 +49,7 @@ public class CardAdapter extends RecyclerView.Adapter<CardAdapter.ViewHolder> {
         return images.length;
     }
 
+    // ViewHolder class
     public static class ViewHolder extends RecyclerView.ViewHolder {
         ImageView imageView;
 
