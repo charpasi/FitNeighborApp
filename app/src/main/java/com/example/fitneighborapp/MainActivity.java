@@ -9,10 +9,13 @@ public class MainActivity extends NavBar {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_home);
+
+        /*Open app to home page
         FrameLayout homePageContainer = findViewById(R.id.homePageContainer);
-        View homePage = getLayoutInflater().inflate(R.layout.home_page, homePageContainer, false);
-        homePageContainer.addView(homePage);
+        View homePage = getLayoutInflater().inflate(R.layout.activity_home, homePageContainer, false);
+        homePageContainer.addView(homePage);*/
+
         setupBottomNavigation(R.id.nav_home);
     }
 }
