@@ -5,7 +5,6 @@ import android.os.Bundle;
 import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager2.widget.ViewPager2;
-
 import com.example.fitneighborapp.NavBar;
 import com.example.fitneighborapp.R;
 
@@ -15,13 +14,13 @@ public class StreakActivity extends NavBar {
 
     private TextView streakCountText;
     private ViewPager2 quotePager;
-    private int streakCount = 10; // Example streak count, can be dynamically updated.
+    private int streakCount = 0;  // Default streak count, can be dynamically updated.
     private String[] motivationalQuotes = {
             "Keep pushing forward!",
             "You're doing great!",
             "One day at a time!",
             "Stay strong, you're almost there!",
-            "Success is the sum of small efforts!",
+            "Success is the sum of small efforts!"
     };
 
     @Override
@@ -59,5 +58,18 @@ public class StreakActivity extends NavBar {
     private int getCurrentDayOfYear() {
         Calendar calendar = Calendar.getInstance();
         return calendar.get(Calendar.DAY_OF_YEAR);
+    }
+
+    // Example method to update streak when the user completes a task
+    public void onTaskCompleted() {
+        SharedPreferences sharedPreferences = getSharedPreferences("streaksPrefs", MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        int currentDay = getCurrentDayOfYear();
+        editor.putInt("lastCompletionDay", currentDay);
+        editor.apply();  // Save the completion day to SharedPreferences
+
+        // Now recalculate the streak count
+        streakCount = calculateStreak(sharedPreferences.getInt("lastCompletionDay", -1));
+        streakCountText.setText("Streak: " + streakCount + " Days");
     }
 }

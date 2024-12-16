@@ -7,6 +7,8 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.fitneighborapp.R;
+
 public class QuoteAdapter extends RecyclerView.Adapter<QuoteAdapter.QuoteViewHolder> {
 
     private String[] quotes;
@@ -18,7 +20,8 @@ public class QuoteAdapter extends RecyclerView.Adapter<QuoteAdapter.QuoteViewHol
     @NonNull
     @Override
     public QuoteViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(android.R.layout.simple_list_item_1, parent, false);
+        // Inflate the custom page layout for ViewPager2
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.page_layout, parent, false);
         return new QuoteViewHolder(view);
     }
 
@@ -38,8 +41,8 @@ public class QuoteAdapter extends RecyclerView.Adapter<QuoteAdapter.QuoteViewHol
 
         public QuoteViewHolder(View itemView) {
             super(itemView);
-            quoteTextView = itemView.findViewById(android.R.id.text1);
+            // Reference to the TextView in the custom layout
+            quoteTextView = itemView.findViewById(R.id.quoteText);
         }
     }
 }
-
