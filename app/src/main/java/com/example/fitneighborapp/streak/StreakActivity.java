@@ -3,8 +3,9 @@ package com.example.fitneighborapp.streak;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.widget.TextView;
-import androidx.appcompat.app.AppCompatActivity;
+
 import androidx.viewpager2.widget.ViewPager2;
+
 import com.example.fitneighborapp.NavBar;
 import com.example.fitneighborapp.R;
 
