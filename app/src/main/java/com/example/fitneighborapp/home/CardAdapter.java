@@ -11,12 +11,12 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.fitneighborapp.R;
 
-public class HomePageAdapter extends RecyclerView.Adapter<HomePageAdapter.ViewHolder> {
+public class CardAdapter extends RecyclerView.Adapter<CardAdapter.ViewHolder> {
 
-    private final int[] images; // Array of drawable resources
+    private final int[] images;
     private final Context context;
 
-    public HomePageAdapter(Context context, int[] images) {
+    public CardAdapter(Context context, int[] images) {
         this.context = context;
         this.images = images;
     }
@@ -24,13 +24,13 @@ public class HomePageAdapter extends RecyclerView.Adapter<HomePageAdapter.ViewHo
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(context).inflate(R.layout.image_item, parent, false);
+        View view = LayoutInflater.from(context).inflate(R.layout.card_item, parent, false);
         return new ViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        holder.imageView.setImageResource(images[position]); // Bind image resource
+        holder.imageView.setImageResource(images[position]);
     }
 
     @Override

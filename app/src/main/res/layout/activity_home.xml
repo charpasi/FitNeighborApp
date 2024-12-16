@@ -7,20 +7,22 @@
     android:background="@color/primary_background">
 
     <!-- App Bar Section -->
-        <TextView
-            android:id="@+id/welcomeText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Welcome back, User!"
-            android:textSize="18sp"
-            android:textColor="@color/black"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginTop="16dp"/>
 
-        <!-- Clock Section -->
-        <TextView
+    <!-- Clock Section -->
+    <TextView
+        android:id="@+id/welcomeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Welcome back, User!"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
             android:id="@+id/clock"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -32,94 +34,35 @@
             app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginTop="8dp"/>
 
-        <!-- Step Counter -->
-    <ImageView
-        android:id="@+id/imageView4"
-        android:layout_width="467dp"
-        android:layout_height="258dp"
-        android:layout_marginBottom="4dp"
-        app:layout_constraintBottom_toTopOf="@+id/viewPager"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/stepcounter" />
+    <!-- Progress Circle Counters -->
 
     <!-- ViewPager2 for swipeable cards -->
 
 
-
-    <TextView
-        android:id="@+id/stepCounter"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="0 Steps"
-        android:textColor="@color/design_default_color_on_secondary"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/clock" />
+    <!-- Bottom Navigation Bar -->
 
     <androidx.viewpager2.widget.ViewPager2
         android:id="@+id/viewPager"
-        android:layout_width="0dp"
-        android:layout_height="200dp"
+        android:layout_width="386dp"
+        android:layout_height="175dp"
         android:layout_marginHorizontal="16dp"
-        android:layout_marginTop="240dp"
+        android:layout_marginTop="12dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.48"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/stepCounter"
-        android:background="@color/cardview_light_background" />
+        app:layout_constraintTop_toBottomOf="@id/imageViewPager" />
 
-
-    <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="267dp"
-        android:orientation="vertical"
-        android:padding="16dp"
-        app:layout_constraintTop_toBottomOf="@+id/stepCounter"
-        tools:layout_editor_absoluteX="0dp">
-
-    </LinearLayout>
-
-
-    <!-- Carousel Dots -->
-    <LinearLayout
-        android:id="@+id/carousel_dots"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:gravity="center"
-        android:orientation="horizontal"
-        app:layout_constraintTop_toBottomOf="@id/viewPager"
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/imageViewPager"
+        android:layout_width="400dp"
+        android:layout_height="335dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginBottom="112dp"
+        android:foregroundGravity="center"
+        app:layout_constraintBottom_toTopOf="@+id/viewPager"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
+        app:layout_constraintTop_toBottomOf="@id/clock" />
 
-        <View
-            android:layout_width="8dp"
-            android:layout_height="8dp"
-            android:layout_marginHorizontal="4dp"
-            android:background="@drawable/dot_unselected"
-            android:contentDescription="@string/dot" />
-
-        <View
-            android:layout_width="13dp"
-            android:layout_height="match_parent"
-            android:layout_marginHorizontal="4dp"
-            android:background="@drawable/dot_selected"
-            android:contentDescription="@string/dot" />
-
-        <View
-            android:layout_width="8dp"
-            android:layout_height="8dp"
-            android:layout_marginHorizontal="4dp"
-            android:background="@drawable/dot_unselected"
-            android:contentDescription="@string/dot" />
-    </LinearLayout>
-
-    <!-- Bottom Navigation Bar -->
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_navigation"
         android:layout_width="match_parent"
