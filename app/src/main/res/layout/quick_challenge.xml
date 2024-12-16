@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@color/primary_background"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/primary_background">
     <!--xmlns:tools="http://schemas.android.com/tools" may need this in the future-->
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
@@ -12,16 +12,18 @@
         android:layout_height="wrap_content"
         android:background="@color/primary_icon"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:menu="@menu/bottom_nav_menu" />
+        app:menu="@menu/bottom_nav_menu">
+
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         android:text="@string/quick_challenge"
-        android:textSize="32sp"
         android:textColor="#000000"
+        android:textSize="32sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -61,7 +63,6 @@
         app:cornerRadius="15dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
 
     <ImageView
         android:id="@+id/imageView2"
@@ -143,11 +144,11 @@
             android:id="@+id/individualChallenges"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|top"
+            android:paddingTop="8dp"
             android:text="@string/individual_challenge"
             android:textColor="#000000"
-            android:textSize="18sp"
-            android:layout_gravity="center_horizontal|top"
-            android:paddingTop="8dp" />
+            android:textSize="18sp" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/individual1"
@@ -205,11 +206,11 @@
             android:id="@+id/teamChallenges"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|top"
+            android:paddingTop="8dp"
             android:text="@string/team_challenge"
             android:textColor="#000000"
-            android:textSize="18sp"
-            android:layout_gravity="center_horizontal|top"
-            android:paddingTop="8dp" />
+            android:textSize="18sp" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/team1"
@@ -233,7 +234,8 @@
             android:backgroundTint="@color/secondary_icon"
             android:contentDescription="@string/team2"
             android:text="@string/team2"
-            android:textColor="#000000"            app:cornerRadius="15dp"
+            android:textColor="#000000"
+            app:cornerRadius="15dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -253,5 +255,49 @@
 
     </FrameLayout>
 
+    <LinearLayout
+        android:id="@+id/formLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:elevation="8dp"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/formTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:paddingBottom="8dp"
+            android:text="@string/enter_details"
+            android:textColor="@color/primary_text"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/distanceInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/enter_distance"
+            android:inputType="number" />
+
+        <Spinner
+            android:id="@+id/unitSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:entries="@array/units_array" />
+
+        <Button
+            android:id="@+id/submitButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/submit" />
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
