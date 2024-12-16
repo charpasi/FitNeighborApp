@@ -33,19 +33,32 @@
             android:layout_marginTop="8dp"/>
 
         <!-- Step Counter -->
-        <TextView
-            android:id="@+id/stepCounter"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="0 Steps"
-            android:textSize="24sp"
-            android:textColor="@color/design_default_color_on_secondary"
-            app:layout_constraintTop_toBottomOf="@id/clock"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginTop="8dp"/>
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="467dp"
+        android:layout_height="258dp"
+        android:layout_marginBottom="4dp"
+        app:layout_constraintBottom_toTopOf="@+id/viewPager"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/stepcounter" />
 
     <!-- ViewPager2 for swipeable cards -->
+
+
+
+    <TextView
+        android:id="@+id/stepCounter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="0 Steps"
+        android:textColor="@color/design_default_color_on_secondary"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/clock" />
 
     <androidx.viewpager2.widget.ViewPager2
         android:id="@+id/viewPager"
@@ -56,7 +69,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/stepCounter"
-        android:background="@color/cardview_light_background"/>
+        android:background="@color/cardview_light_background" />
 
 
     <LinearLayout
@@ -70,6 +83,7 @@
         tools:layout_editor_absoluteX="0dp">
 
     </LinearLayout>
+
 
     <!-- Carousel Dots -->
     <LinearLayout
@@ -114,13 +128,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:menu="@menu/bottom_nav_menu" />
 
-    <ImageView
-        android:id="@+id/imageView4"
-        android:layout_width="416dp"
-        android:layout_height="233dp"
-        app:layout_constraintBottom_toTopOf="@+id/viewPager"
-        app:srcCompat="@drawable/stepcounter"
-        tools:layout_editor_absoluteX="-4dp" />
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
